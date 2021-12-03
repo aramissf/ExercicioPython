@@ -1,0 +1,16 @@
+vlr_hrs     = float(input('Qual o valor da hora trabalhada : '))
+hrs_dia     = float(input('Quantas hora voce trabalha por dia'))
+hrs_mes     = hrs_dia * 24
+salario_liq = vlr_hrs * hrs_mes
+IR          = salario_liq * 0.011
+INSS        = salario_liq * 0.008
+sindicato   = salario_liq * 0.005
+descontos   = int(IR + INSS + sindicato)
+salario_bru = salario_liq - descontos
+
+print('Seu salario liquido e de : ' + str(salario_liq))
+print('Seu desconto para Imposto de rende e de : ' +str(IR))
+print('Seu desconto para INSS e de : ' + str(INSS))
+print('Seu desconto para o sindicado de de : '+ str(sindicato))
+print('Total de descontos e de : ' + str(descontos))
+print('Seu salario Bruto e de : ' + str(salario_bru))
